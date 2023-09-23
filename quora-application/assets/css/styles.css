@@ -1,0 +1,164 @@
+body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: calc(15px * var(--dynamic-font-scale,1));
+    line-height: 1.4;
+    color: rgb(40, 40, 41);
+    direction: ltr;
+    background-image: url('/images/bg.jpg');
+}
+
+.wrapper{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 40%;
+    height: auto;
+    margin: 2% auto;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+.container-head{
+    text-align: center;
+    margin: 40px 0;
+}
+
+.container-heading{
+    color: rgb(185, 43, 39);
+    text-decoration: none;
+    margin: auto;
+    font-size: 50px;
+    padding-bottom: 10px;
+    font-weight: bolder;
+}
+
+.container-peragraph {
+    margin: auto;
+    position: relative;
+    font-weight: 500;
+    color: #636466;
+    font-size: 17px;
+}
+
+.container-body {
+    display: flex;
+    position: relative;
+    margin: 21px 0px;
+}
+
+.container-right p {
+    font-weight: 600;
+    border-bottom: rgb(222, 224, 225) 1px solid;
+    box-sizing: border-box;
+    text-align: initial;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.container-left{
+    width: 49%;
+    text-align: center;
+    padding-right: 20px;
+}
+.container-left p{
+    text-align: left;
+    color: rgb(153, 155, 158);
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.container-left p{
+    text-align: left;
+    color: rgb(153, 155, 158);
+    font-weight: 500;
+}
+
+.container-left a:hover{
+    color: black;
+    font-weight: 600;
+}
+
+.container-left .auth-button {
+    border: rgb(222, 224, 225) 1px solid;
+    box-sizing: border-box;
+    padding: 6px;
+    margin: 5px 46px 4px 0px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+}
+
+.container-left .auth-button:hover{
+    background-color: #d5d5d5;
+}
+
+.container-left a{
+    text-decoration: none;
+    color: rgb(153, 155, 158);
+    text-align: center;
+}
+
+.container-right{
+    width: 49%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.border{
+    border: rgb(222, 224, 225) 1px solid;
+}
+
+.container-right label{
+    font-weight: 500;
+    padding-top: 10px;
+}   
+
+.form-input{
+    display: grid;
+    width: auto;
+}
+
+.form-input input{
+    height: 27px;
+    width: auto;
+    font-weight: bold;
+}
+
+.form-input-submit{
+    padding-top: 10px;
+    text-align: right;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(149, 179, 255);
+    color: rgb(250, 252, 255);
+    border-radius: 20px;
+    transition: none;
+    cursor: pointer;
+}
+
+button:hover{
+    font-weight: 500;
+}
+
+.vertical-border{
+    border-bottom: rgb(222, 224, 225) 1px solid;
+}
+.container-footer{
+    text-align: center;
+}
+
+.container-footer a{
+    text-decoration: none;
+    color: rgb(153, 155, 158);
+    cursor: pointer;
+}
+
+.container-footer a:hover{
+    color: black;
+    font-weight: 500;
+}
