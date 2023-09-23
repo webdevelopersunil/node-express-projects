@@ -5,6 +5,7 @@ body {
     color: rgb(40, 40, 41);
     direction: ltr;
     background-image: url('/images/bg.jpg');
+    user-select: none;
 }
 
 .wrapper{
