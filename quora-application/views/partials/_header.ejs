@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <title><%= locals.title %></title>
 </head>
 <body>
     <div class="wrapper" >
@@ -13,3 +13,14 @@
                 <p class="container-heading">Quora</p>
                 <p class="container-peragraph">A place to share knowledge and better understand the world</p>
             </div>
+
+            <div class="container-body">
+                <div class="container-left">
+                    <p class="">By continuing you indicate that you agree to Quora’s <a href="">Terms of Service</a> and <a
+                            href="">Privacy Policy</a>.</p>
+                    <div class="auth-button">Continue with Google</div>
+                    <div class="auth-button">Continue with Facebook</div>
+                    <p><a href="<%= locals.href %>"> <%= locals.a_content %> </a></p>
+                </div>
+                
+                <span class="border"></span>
