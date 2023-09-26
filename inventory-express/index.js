@@ -1,19 +1,30 @@
 import express from 'express'
 import ProductController from './src/controllers/product.controller.js';
-const port = 3400;
+import expressEjsLayouts from 'express-ejs-layouts';
 import path from 'path';
 
+const port = 3400;  //  Giving port to run on server
 
-// Initialize the express functionalities
-const server = express();
 
+const server = express();   // Initialize the express functionalities
+
+server.use(express.urlencoded({extended:true}));   //  parse form data
 
 server.set('view engine','ejs');
-server.set('views',path.join(path.resolve(),"src",'views'))
+server.set('views',path.join(path.resolve(),"src",'views'));
+
+server.use(expressEjsLayouts);    // informing the server to use the imported layout
 
 
 const productController = new ProductController();  // create an instance of ProductController
-server.get('/', (productController.getProducts));
+
+// Routes Start
+
+server.get('/', productController.getProducts);
+server.get('/new',productController.getAddForm);
+server.post('/',productController.addNewProduct);
+// Routes End
+
 
 server.use(express.static('src/views'));
 
