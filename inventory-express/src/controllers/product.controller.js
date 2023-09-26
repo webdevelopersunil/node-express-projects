@@ -3,18 +3,18 @@ import ProductModel from '../models/product.model.js';
 
 export default class ProductController{
 
-    getProducts(req,res){
+    getProducts(req,res, next){
         let products = ProductModel.get()
         console.log(products);
         return res.render('products', {products});
         // return res.sendFile(path.join(path.resolve(),"src",'views',"products.html" ));
     }
 
-    getAddForm(req, res){
+    getAddForm(req, res, next){
         return res.render('new-product');
     }
 
-    addNewProduct(req, res){
+    addNewProduct(req, res, next){
         // access data from form.
         console.log(req.body);
         ProductModel.add(req.body);
