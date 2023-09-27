@@ -7,4 +7,4 @@
 - json Parser
 - form data validation
 - validation Middleware
-- Express Validator as middleware
+- Express Validator as middleware (express-validator)
