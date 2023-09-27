@@ -4,7 +4,7 @@ const validateRequest = async (req, res, next) => {
     console.log('i am in');
     // 1. set-up the rule for validation.
     const rules = [
-        body('name').isEmpty().withMessage("Name is reauired ?"),
+        body('name').notEmpty().withMessage("Name is reauired ?"),
         body('price').isFloat({ gt: 0 }).withMessage("Price should be a positive value"),
         body('imageUrl').isURL().withMessage("Invalid URL"),
     ];
