@@ -1,7 +1,8 @@
 import express from 'express'
 import ProductController from './src/controllers/product.controller.js';
 import expressEjsLayouts from 'express-ejs-layouts';
-import validateRequest from './src/middleware/validation.middleware.js';
+import customValidateRequest from './src/middleware/customValidation.middleware.js';
+import validateRequest from './src/middleware/validateRequest.middleware.js';
 import path from 'path';
 
 const port = 3400;  //  Giving port to run on server
@@ -23,7 +24,8 @@ const productController = new ProductController();  // create an instance of Pro
 
 server.get('/', productController.getProducts);
 server.get('/new',productController.getAddForm);
-server.post('/',validateRequest, productController.addNewProduct);
+// server.post('/',customValidateRequest, productController.addNewProduct);
+server.post('/',validateRequest , productController.addNewProduct);
 // Routes End
 
 
