@@ -10,6 +10,8 @@ const port = 3400;  //  Giving port to run on server
 
 const server = express();   // Initialize the express functionalities
 
+server.use(express.static("public"));   //  for use the static files like js/css and images
+
 server.use(express.urlencoded({extended:true}));   //  parse form data
 
 server.set('view engine','ejs');
@@ -28,7 +30,7 @@ server.get('/new',productController.getAddForm);
 server.post('/',validateRequest , productController.addNewProduct);
 server.get('/update-product/:id', productController.getUpdateProductView);
 server.post('/update-product',productController.postUpdateProduct);
-server.get('/delete-product/:id',productController.deleteProduct)
+server.post('/delete-product/:id',productController.deleteProduct)
 // Routes End
 
 
